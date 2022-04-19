@@ -9,7 +9,7 @@ defaults:
     shell: bash
 
 env:
-  project-name: libtcod-vcpkg-template
+  project-name: libtcod-cpp-tutorial
 
 jobs:
   build:

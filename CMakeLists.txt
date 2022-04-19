@@ -7,7 +7,7 @@ if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
 endif()
 
 project(
-    libtcod-vcpkg-template  # Project name, change this as needed.
+    libtcod-cpp-tutorial
     LANGUAGES C CXX
 )
 
@@ -40,3 +40,5 @@ add_subdirectory("libtcod")  # This will error if you haven't initialized libtco
 
 find_package(SDL2 CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2 SDL2::SDL2main libtcod::libtcod)
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
